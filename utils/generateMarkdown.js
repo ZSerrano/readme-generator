@@ -1,49 +1,69 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if (license === 'MIT') {
+    return '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)'
+  } else {
+    return ''
+  }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license === 'MIT') {
+    return '[MIT License Documentation](https://en.wikipedia.org/wiki/MIT_License)'
+  } else {
+    return ''
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (license === 'MIT') {
+    return 'The license being used is the MIT license. You can find more information by clicking the link below.'
+  } else {
+    return ''
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-    \n
-    ## Table of Contents
-    \n 1. [Description](#description)
-    \n 2. [Installation](#installation)
-    \n 3. [Usage](#usage)
-    \n 4. [Contributors](#contributors)
-    \n 5. [Tests](#tests) 
-    ## Description <a href="description"></a>
-    \n 
-    ${data.description}
-    \n
-    ## Installation <a href="installation"></a>
-    \n 
-    ${data.installation}
-    \n
-    ## Usage <a href="usage"></a>
-    \n 
-    ${data.usage}
-    \n
-    ## Contributors <a href="contributors"></a>
-    \n 
-    ${data.contributors}
-    \n
-    ## Tests <a href="tests"></a>
-    \n 
-    ${data.tests}
-    \n
+  return `
+  ${renderLicenseBadge(data.license)}
+
+  # ${data.title}
+
+  ## Table of Contents
+  1. [Description](#description)
+  2. [Installation](#installation)
+  3. [Usage](#usage)
+  4. [Contributors](#contributors)
+  5. [Tests](#tests)
+  6. [License](#license) 
+
+  ## Description <a name="description"></a>
+  ${data.description}
+
+  ## Installation <a name="installation"></a>
+  ${data.installation}
+
+  ## Usage <a name="usage"></a>
+  ${data.usage}
+
+  ## Contributors <a name="contributors"></a>
+  ${data.contributors}
+
+  ## Tests <a name="tests"></a> 
+  ${data.tests}
+
+  ## License <a name="license"></a>
+  ${renderLicenseSection(data.license)}
+  ${renderLicenseLink(data.license)}
 `;
 }
 
-module.exports = generateMarkdown;
-module.exports = renderLicenseBadge;
-module.exports = renderLicenseLink;
-module.exports = renderLicenseSection;
+module.exports = {
+  generateMarkdown
+};
