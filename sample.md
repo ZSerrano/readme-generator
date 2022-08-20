@@ -1,7 +1,7 @@
 
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-  # abc
+  # sample
 
   ## Table of Contents
   1. [Description](#description)
@@ -10,21 +10,22 @@
   4. [Contributors](#contributors)
   5. [Tests](#tests)
   6. [License](#license) 
+
   ## Description <a name="description"></a>
-  abcd
+  sample
 
   ## Installation <a name="installation"></a>
-  abcde
+  sample
 
   ## Usage <a name="usage"></a>
-  abdef
+  sample
 
   ## Contributors <a name="contributors"></a>
-  abcd
+  sample
 
   ## Tests <a name="tests"></a> 
-  abde
+  sample
 
   ## License <a name="license"></a>
   The license being used is the MIT license. You can find more information by clicking the link below.
-  ![MIT License Documentation](https://en.wikipedia.org/wiki/MIT_License)
+  [MIT License Documentation](https://en.wikipedia.org/wiki/MIT_License)
